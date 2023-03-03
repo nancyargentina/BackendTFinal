@@ -1,7 +1,7 @@
 const express = require("express");
 const { Router } = express;
 const auth=require("../auth/auth")
-const {userDao}=require("../Daos/index")
+const {userDao}=require("../daos/index")
 let router = new Router();
 
 router.get('/userHome',auth,(req,res)=>{
