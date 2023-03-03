@@ -2,7 +2,7 @@ const { argu } = require("./config");
 const express = require("express");
 const cluster = require("cluster");
 const productRouter = require("./routes/products")
-const carRouter = require("./routes/car")
+const cartRouter = require("./routes/cart")
 const userRouter=require("./routes/usuario")
 /* elegir opcion en daos/index.js
 1: firebase
@@ -55,7 +55,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/productos", productRouter)
-app.use("api/carrito", carRouter)
+app.use("api/carrito", cartRouter)
 app.use("/",userRouter)
 app.use("/", sessionRouter);
 
