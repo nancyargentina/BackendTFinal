@@ -1,0 +1,54 @@
+<main class="container  bg-opacity-25 bg-secondary rounded p-3">
+    <h1 class="text-primary">Registro de Usuario</h1>
+    <form action="/registro" enctype="multipart/form-data" method="post" >
+    <div class="mb-3 row">
+        <div class="col-m-6">
+            <label for="nombre"class="col-m-2 col-form-label">Nombre: </label>
+            <input type="text"  class="form-control" name="nombre" id="nombre" placeholder="Escribe tu nombre de usuario" required/>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="col-m-2 col-form-label">Correo eletrónico: </label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Ingresa tu email" required/>
+        </div>     
+        <div class="col-md-6">
+            <label for="password" class="col-m-2 col-form-label">Contraseña: </label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Ingresa tu password" required/>
+        </div>
+        <div class="col-md-5">
+            <label for="direccion"class="col-m-2 col-form-label">Dirección: </label>
+            <input type="text"  class="form-control" name="calle" id="calle" placeholder="Av. SiempreViva" />
+        </div>
+        <div class="col-md-1">
+            <label for="numero"class="col-m-2 col-form-label">N°: </label>
+            <input type="text"  class="form-control" name="numero" id="numero" placeholder="123" />
+        </div>
+        <div class="col-md-2">  
+            <label for="ciudad"class="col-m-2 col-form-label">Ciudad: </label>  
+            <input type="text"  class="form-control" name="ciudad" id="ciudad" placeholder="Ciudad" />
+        </div>
+        <div class="col-md-2">
+            <label for="provincia"class="col-m-2 col-form-label">Provincia: </label>
+            <input type="text"  class="form-control" name="provincia" id="provincia" placeholder="provincia" />  
+        </div>
+        <div class="col-md-2">
+            <label for="pais"class="col-m-2 col-form-label">País: </label>    
+            <input type="text"  class="form-control" name="pais" id="pais" placeholder="pais" />
+        </div>
+        <div class="col-md-2">
+            <label for="edad" class="col-m-2 col-form-label">Edad: </label>
+            <input type="number" class="form-control" type="number" id="edad" name="edad" min="10" max="100" placeholder="21">
+        </div>
+        <div class="col-md-5">
+            <label for="telefono"class="col-m-2 col-form-label">Teléfono: </label>
+            <input type="tel" class="form-control" name="telefono" id="telefono" pattern="+[0-9]{5}-[0-9]{4}-[0-9]{4}" placeholder="+54911-9988-77566" />
+        </div>     
+        <div class="col-md-5">
+            <label for="avatar" class="col-m-2 col-form-label">Foto de perfil: </label>
+            <input type="file" class="form-control" id="avatar"name="avatar" accept="image/png, image/jpeg">
+        </div>
+    </div>
+        <button class="btn btn-success">ENVIAR</button>
+    </form>
+    <hr/>
+    <button class="btn btn-success" onclick="location.href='/login'">Ir a login</button>
+</main>

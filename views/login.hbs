@@ -1,0 +1,21 @@
+<main class="container bg-opacity-25 bg-secondary rounded p-3">
+    <h1 class="text-primary">Login de usuario</h1>
+    <form action="/login" method="post">
+        <div class="mb-3 row">
+            <label for="email" class="col-sm-3 col-form-label">Ingrese su correo electrónico:</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control" id="email" name="email" />
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="password" class="col-sm-3 col-form-label">Ingrese su contraseña: </label>
+            <div class="col-sm-7">
+                <input type="password" class="form-control" id="password" name="password" />
+            </div>
+        </div>
+        <button class="btn btn-success">Enviar</button>
+    </form>
+    <hr />
+    <button class="btn btn-success" onclick="location.href='/registro'">Ir a
+        Registrar</button>
+</main>

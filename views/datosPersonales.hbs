@@ -1,0 +1,49 @@
+<main class="container">
+    <div class="bg-opacity-25 bg-secondary rounded p-3">
+        <h1 class="text-primary">Datos personales</h1>
+    </div>
+    <br>
+    <table class="table table-sm table-striped table-bordered">
+        <tbody>
+            {{#with usuario._doc}}
+                <tr>
+                    <td>Nombre: </td>
+                    <td colspan="4">{{nombre}} </td>
+                    <td rowspan="3"><img class="img-thumbnail" style="width:200px" src='/avatares/{{foto}}' alt={{nombre}} /></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td colspan="4">{{email}} </td>
+                </tr>
+                <tr>
+                    <td>Edad: </td>
+                    <td colspan="4">{{edad}} </td>
+                </tr>
+                <tr>
+                    <td>Teléfono: </td>
+                    <td colspan="5">{{telefono}} </td>
+                </tr>
+                <tr>
+                    <td>Direccion: </td>
+                    <td colspan="3">{{direccion.calle}} </td>
+                    <td>N°</td>
+                    <td>{{direccion.numero}}</td>
+                </tr>
+                <tr>
+                    <td>Ciudad: </td>
+                    <td>{{direccion.ciudad}}</td>
+                    <td>Provincia: </td>
+                    <td>{{direccion.provincia}} </td>
+                    <td>País: </td>
+                    <td>{{direccion.pais}}</td>
+                </tr>
+
+            {{/with}}
+        </tbody>
+    </table>
+
+    <button
+        class="btn btn-success"
+        onclick="location.href='/userHome'"
+    >Home</button>
+</main>

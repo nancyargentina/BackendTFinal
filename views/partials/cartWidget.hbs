@@ -1,0 +1,10 @@
+{{#if cart}}
+    <div style ="visibility:visible">
+{{else}}
+    <div style ="visibility:hidden">
+{{/if}}
+    <Link to="/cart">
+    <i class="fa-solid fa-cart-shopping" style="color:purple, size:30px"></i>             
+        <span class="badge top-0 start-100 translate-middle bg-secondary border border-light">{{ cantidadCart}}</span>
+    </Link>
+</div>

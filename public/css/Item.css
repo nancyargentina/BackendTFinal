@@ -1,0 +1,10 @@
+.card .imagen{
+    max-height: 334px;
+}
+.card{
+    max-width: '16rem';
+    margin: '12px';
+}
+.indigo{
+    background-color: #6610f2;
+  }

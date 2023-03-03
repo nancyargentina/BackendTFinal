@@ -1,0 +1,9 @@
+[
+    {"id":1,"timestamp":"2022-01-01","nombre":"producto1","descripcion":"descripcion 1","precio":1234,"foto":"https://via.placeholder.com/150/92c952","codigo":1234,"stock":4},
+    {"id":2,"timestamp":"2022-01-01","nombre":"producto2","descripcion":"descripcion 2","precio":123.23,"foto":"https://via.placeholder.com/150/771796","codigo":1235,"stock":4},
+    {"id":3,"timestamp":"2022-01-01","nombre":"producto3","descripcion":"descripcion 3","precio":345.67,"foto":"https://via.placeholder.com/150/24f353","codigo":1236,"stock":4},
+    {"id":4,"timestamp":"2022-01-01","nombre":"producto4","descripcion":"descripcion 4","precio":2312,"foto":"https://via.placeholder.com/150/0000FF/808080","codigo":1237,"stock":4},
+    {"id":5,"timestamp":"2022-01-01","nombre":"producto5","descripcion":"descripcion 5","precio":123.23,"foto":"https://via.placeholder.com/150/771796","codigo":1238,"stock":4},
+    {"id":6,"timestamp":"2022-01-01","nombre":"producto6","descripcion":"descripcion 6","precio":234.2,"foto":"https://cdn.pixabay.com/photo/2012/04/10/17/40/vitamins-26622_960_720.png","codigo":1239,"stock":4},
+    {"id":7,"timestamp":1652332165693,"nombre":"producto7","descripcion":"descripcion 7","precio":123.23,"foto":"https://cdn.pixabay.com/photo/2012/04/10/17/40/vitamins-26622_960_720.png","codigo":"1235","stock":4}
+]
