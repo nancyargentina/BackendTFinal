@@ -1,5 +1,5 @@
 # BackendTFinal
-_repositorio de TRabajo final
+_ repositorio de TRabajo final
 # Proyecto: tienda nailart. Tienda de productos de una nailartist.
 
 ## Alumno: Nancy Carolina Martinez
@@ -9,7 +9,6 @@ _repositorio de TRabajo final
 #### Tutor: Mauricio Di Prieto
 
 ### Levanté en railway:
+backendtfinal-production.up.railway.app/
 
-https://zoenailart.com.ar/
-
---- backendtfinal-production.up.railway.app
+--- 
