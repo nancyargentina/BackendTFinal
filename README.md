@@ -1,6 +1,6 @@
 # BackendTFinal
 _ repositorio de TRabajo final
-# Proyecto: tienda nailart. Tienda de productos de una nailartist.
+# Proyecto: Tienda de productos de nailart.
 
 ## Alumno: Nancy Carolina Martinez
 
