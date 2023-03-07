@@ -3,6 +3,7 @@ const mongoose =require('mongoose');
 const cartSchema= new mongoose.Schema({
     timestamp: { type: Number, required: true, default: Date.now() },
     productos: [{
+        id: {type: isObjectIdOrHexString, required:true},
         timestamp: { type: Number, required: true, default: Date.now() },
         nombre: { type: String, required: true, maxLength: 50, unique: true },
         descripcion: { type: String, required: true },

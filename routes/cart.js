@@ -4,10 +4,9 @@ const {Router}= express;
 
 let router =  new Router();
 
-//  crea un carrito y devuelve su id
+//  crea un carrito vacío y devuelve su id
 router.post ("/",async(req,res)=>{
     try {
-        //creo nuevo objeto agregando campo ID y guardo en carritos
         let cartEmpty = {
             timestamp: Date.now(),
             productos: []
@@ -30,7 +29,7 @@ router.get("/:id/productos",async(req,res)=>{
     }
 })
 
-//agrega productos al carrito por su id de producto
+//  agrega productos al carrito por su id de producto
 router.post ("/:id/productos",async (req,res)=>{
     try {
         const {productId,cant} = req.body
@@ -38,46 +37,29 @@ router.post ("/:id/productos",async (req,res)=>{
         await cartDao.addProductInCart(idCart,productId,cant)
         res.send({mensaje:"producto agregado al carrito"})
     } catch (error) {
-        res.send({ error: "Error al guardar" });
+        res.send({ error: `Error al guardarproducto en el carrito` });
     }
 })
 
-//elimino un carrito segun su ID
-router.delete("/:id",(req,res)=>{
-    fs.readFile("./data/cars.json","utf-8",(err,data)=>{
-       if(err){
-           res.send( {error:"Error al almacenar"} )
-       }
-       else{
-           //todos los carritos
-           const elementos=JSON.parse(data);
-           const nuevaLista = elementos.filter(ele => ele.id != req.params.id);
-           fs.writeFile(`./data/cars.json`, JSON.stringify(nuevaLista), (err) =>{
-            if (err) res.send ({error:"carrito no encontrado"});
-            res.send("Elemento Eliminado");
-            });
-       }
-    })
+//  elimino un carrito segun su ID
+router.delete("/:id",async(req,res)=>{
+    try {
+        await cartDao.deleteById(req.params.id);
+        res.send("Carrito Eliminado");
+    } catch (error) {
+        res.send({ error: "carrito no encontrado" });
+    }
 })
 
-
-//Elimina un producto del carrito por su id de carrito y de producto
-router.delete("/:id/productos/:id_prod",(req,res)=>{
-    fs.readFile("./data/cars.json","utf-8",(err,data)=>{
-       if(err){
-           res.send( {error:"Error al almacenar"} )
-       }
-       else{
-           //todos los carritos
-           const elementos=JSON.parse(data);
-           const nuevaLista = elementos.filter(ele => ele.id != req.params.id);
-           fs.writeFile(`./data/cars.json`, JSON.stringify(nuevaLista), (err) =>{
-            if (err) res.send ({error:"carrito no encontrado"});
-            res.send("Elemento Eliminado");
-            });
-       }
-    })
+//  Elimina un producto del carrito por su id de carrito y de producto
+router.delete("/:id/productos/:id_prod",async(req,res)=>{
+    try {
+        await cartDao.deleteCartProduct(req.params.id, req.params.id_prod)
+        res.send("producto eliminado")
+        
+    } catch (error) {
+        res.send( {error:"Error al eliminar producto"} )
+    }
 })
-
 
 module.exports = router
